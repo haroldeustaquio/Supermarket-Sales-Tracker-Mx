@@ -1,40 +1,50 @@
-# Clustering of Sales Transaction
+# Sales transaction clustering
 
-## Project Overview
+## Project overview
 
-This project applies clustering techniques to a real-world dataset with the goal of segmenting customers based on their purchasing behaviors and demographic characteristics. By identifying natural customer groupings, the company can enhance its marketing and sales strategies. This analysis focuses on understanding customer behavior across different product sectors, allowing the company to personalize its approach and optimize business outcomes.
+This project applies a variety of machine learning models to analyze a real-world dataset. Clustering techniques, such as **clustering**, have been implemented to segment customers based on their purchasing behaviors and demographic characteristics. Additionally, classification models, such as **decision trees** and **logistic regression**, have been used in specific cases that require categorizing customers according to different criteria. In the near future, **regression** models will be applied with the aim of predicting trends and quantitative relationships between variables, allowing the company to anticipate future behaviors and optimize its business strategies. This in-depth analysis will allow marketing and sales actions to be customized, improving results in various product sectors.
 
-## Business Context
+## Business context
 
-The dataset comes from a company aiming to optimize its marketing and sales strategies based on customer behavior. The primary objectives of this analysis are to:
+The dataset comes from a company that seeks to optimize its marketing and sales strategies based on customer behavior. The main objectives of this analysis are:
 
-- **Segment Customers**: Group customers into segments based on demographic characteristics (such as age, marital status, education level) and purchasing patterns (such as product preferences, spending habits).
-- **Product Sector Analysis**: Analyze product sectors to identify sales trends and customer behavior for specific categories, lines, and sub-lines.
-  
+- **Segment customers**: Group customers into segments based on demographic characteristics (such as age, marital status, education level) and purchasing patterns (such as product preferences, spending habits).
+- **Product sector analysis**: Analyze product sectors to identify sales trends and customer behavior for specific categories, lines, and sublines.
+
 By leveraging clustering, the company aims to:
-  
-- **Personalize Marketing Strategies**: Tailor marketing campaigns to each customer segment, offering relevant products and promotions.
-- **Identify New Business Opportunities**: Discover potential markets or customer needs that can be addressed with new product development or expansion into different sectors.
-- **Enhance Customer Experience**: Provide more personalized services, improving customer satisfaction and loyalty by understanding their specific needs and preferences.
+
+- **Personalize marketing strategies**: Tailor marketing campaigns to each customer segment, offering relevant products and promotions.
+- **Identify new business opportunities**: Discover potential markets or customer needs that can be addressed with new product development or expansion into different sectors.
+- **Improve customer experience**: Provide more personalized services, improving customer satisfaction and loyalty by understanding their specific needs and preferences.
 
 ## Data Description
 
-The dataset contains a wide variety of variables relevant to customer purchases and demographics:
+The dataset contains a wide variety of variables relevant to customer purchasing and demographics:
 
-- **Product-related variables**: `Sector`, `Tipo`, `Linea`, `Sublinea`, `Presentacion`, `Gramaje`, `Producto`, `Descripcion`
-- **Transaction details**: `Fecha`, `Transaccion`, `Pedido`, `Cantidad`, `Precio`, `Precio_Max`, `Dif_PrecioMax`, `Importe`
-- **Customer demographics**: `Cliente`, `Clave_Cliente`, `No._Hijos`, `Antiguedad`, `Edad`, `Edad_Rango`, `Escolaridad`, `Estado_Civil`, `Estado`, `Sexo`
-- **Business identifiers**: `Empresa`, `Anio`
-- **Other variables**: `Funcion`, `Grupo`
+- **Product-related variables**: `Industry`, `Type`, `Line`, `Subline`, `Presentation`, `Weight`, `Product`, `Description`
+- **Transaction details**: `Date`, `Transaction`, `Order`, `Quantity`, `Price`, `Max_Price`, `Max_Price_Dif`, `Amount`
+- **Customer demographics**: `Customer`, `Customer_Key`, `No._Children`, `Seniority`, `Age`, `Age_Range`, `Education`, `Marital_Status`, `State`, `Sex`
+- **Business identifiers**: `Company`, `Year`
+- **Other variables**: `Function`, `Group`
 
-These variables provide detailed insights into the purchasing behavior of clients, allowing the company to better understand both their demographics and how they interact with different product categories.
+These variables provide detailed information about the purchasing behavior of customers, allowing the company to better understand both their demographic characteristics and how they interact with different product categories.
 
-## Clustering Algorithms Used
+## Clustering algorithms used
 
 The following clustering algorithms were used in this project:
 
-- **K-Means Clustering**: A classic partitioning algorithm that assigns each data point to the closest cluster center based on distance.
-- **Agglomerative Clustering**: This is useful for building a hierarchy of clusters, joining data into larger groups based on similarities, starting with each data point as its own cluster. It is particularly effective for discovering hierarchical structure in data.
+- **K-Means Clustering**: A classic partitioning algorithm that assigns each data point to the nearest cluster center based on distance.
+- **Agglomerative Clustering**: This is useful for creating a hierarchy of clusters, joining the data into larger groups based on similarities, starting with each data point as its own cluster. It is particularly effective for uncovering the hierarchical structure of the data.
+
+## Classification algorithms used
+
+The following classification algorithms were used in this project:
+
+- **Decision trees:** a hierarchical rule-based model that segments data by successive splits, selecting features that maximize separation between classes. It is useful for clear and visual interpretations of the decision-making process.
+
+- **Logistic regression:** a statistical model used to predict the probability of an instance belonging to a particular class. It is especially effective for binary classification problems, allowing relationships between features and classes to be modeled through a sigmoid function.
+
+Both algorithms provided valuable insights into the categorization of the data and helped optimize the performance of the model.
 
 ## Requirements
 
