@@ -29,14 +29,14 @@ The dataset contains a wide variety of variables relevant to customer purchasing
 
 These variables provide detailed information about the purchasing behavior of customers, allowing the company to better understand both their demographic characteristics and how they interact with different product categories.
 
-## Clustering algorithms used
+## Clustering algorithms
 
 The following clustering algorithms were used in this project:
 
 - **K-Means Clustering**: A classic partitioning algorithm that assigns each data point to the nearest cluster center based on distance.
 - **Agglomerative Clustering**: This is useful for creating a hierarchy of clusters, joining the data into larger groups based on similarities, starting with each data point as its own cluster. It is particularly effective for uncovering the hierarchical structure of the data.
 
-## Classification algorithms used
+## Classification algorithms
 
 The following classification algorithms were used in this project:
 
@@ -46,6 +46,14 @@ The following classification algorithms were used in this project:
 
 Both algorithms provided valuable insights into the categorization of the data and helped optimize the performance of the model.
 
+## Regression algorithms
+
+The following regression algorithms were applied in this project:
+
+- **DecisionTreeRegressor:** A model that predicts continuous values by recursively splitting the dataset based on feature values, generating a tree structure. It selects splits that minimize the variance within each segment, making it an interpretable model with the ability to capture complex, non-linear relationships in the data. This approach is particularly useful for understanding which features most influence the target variable.
+
+- **GradientBoostingRegressor:** A powerful ensemble method that combines multiple weak prediction models (typically decision trees) in a sequential manner. Each tree corrects the errors of its predecessor, gradually improving prediction accuracy. It is highly effective for capturing non-linear relationships and managing both overfitting and underfitting through hyperparameter tuning, making it suitable for complex regression tasks.
+
 ## Requirements
 
 Make sure you have the following Python libraries installed:
@@ -54,3 +62,5 @@ Make sure you have the following Python libraries installed:
 - `numpy`
 - `matplotlib`
 - `scikit-learn`
+- `seaborn`
+- `shap`
